@@ -1,38 +1,169 @@
-.App {
+*{
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+.form-component{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height:450px;
+  align-items: center;
+  width:100vw;
+  max-width: 600px;
+  margin:0 auto;
+  border-radius: 25px;
+  border:2px solid black;
+  padding:30px;
+  background-color: white;
+  opacity: 1;
+}
+.title{
+  margin-top:10vh;
+  margin-bottom: 20px;
   text-align: center;
+  font-family: 'Caveat',cursive;
+}
+.background{
+  background-image: url("https://www.verywellmind.com/thmb/FPgeZYRE5rRDD1bdMtka8ATxID0=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1057500046-f7e673d3a91546b0bd419c5d8336b2e0.jpg");
+  background-size:auto 450px;
+  opacity: 0.8;
+ 
+}
+.message-component{
+  width:1000px;
+  margin:50px auto;
+  display: flex;
+  height:600px;
+  border: 2px solid rgb(93, 158, 151);
+  
+}
+.tab-component{
+  max-width: 240px;
+  overflow-x: auto;
+  background-color: white;
+}
+.conversation-component{
+  padding:10px;
+  flex-grow: 1;
+  background-color: rgba(190, 240, 229, 0.7);
+  display:flex;
+  flex-direction: column;
+}
+.message-box{
+  flex-grow: 1;
+  overflow-y: auto  ;
+}
+.message-area {
+  display: flex;
+  flex-direction: row;
+}
+.contact-name{
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.contact-name:hover{
+  background-color: rgba(168, 230, 223, 0.7);
+}
+.message{
+  position: relative;
+  word-break: break-all;
+  display: flex;
+}
+.conversation{
+  padding:5px;
+  max-width:200px;
+  min-width: 100px;
+  display: inline-block;
+  background-color: wheat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message-left{
+ 
+  flex-direction: row;
+}
+.message-right{
+  flex-direction: row-reverse;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sender{
+  font-size: 12px;
+  color:gray;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sender-right{
+  text-align: right;
+}
+.btn-add{
+  flex-grow: 1;
+}
+.tab{
   display: flex;
   flex-direction: column;
+}
+.list{
+  
+  overflow-y: auto;
+}
+.btn-container{
+  display:flex;
+  flex-direction: row;
+  margin:5px 0;
+}
+.error-message{
+  background-color:rgb(255, 148, 140,0.5);
+  font-size:15px;
+  border-radius: 10px;
+  margin:8px 10px;
+  padding:2px 5px;
+  color:red
+}
+.success-message{
+  background-color:rgb(79, 240, 122, 0.5);
+  font-size:15px;
+  border-radius: 10px;
+  margin:8px 10px;
+  padding:2px 5px;
+  color:green
+}
+.checkbox-grp{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+.empty{
+  font-family: 'Caveat',cursive;
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.logout{
+  position: absolute;
+  right:0px;
+  top:0px;
+  background-color: rgb(190, 240, 229, 0.7);
+  cursor: pointer;
+  padding:10px;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin:5px auto;
+  animation: spin 2s linear infinite;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
